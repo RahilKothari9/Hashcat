@@ -27,14 +27,10 @@ hashcat -m 0 -a 3 hash.txt ?d?d?d?d
 ## 🛠 Demo 3: Mask Attack (Targeted Cracking)
 **What it does:** If part of the password is known, it reduces guessing time.  
 
-### **1️⃣ Generate a Hash (Target Password: "P@ss1234")**
-```bash
-echo -n "P@ss1234" | md5sum > hash.txt
-```
 
-### **2️⃣ Run a Mask Attack (Known Prefix "P@ss")**
+### **1 Run a Mask Attack (Known Prefix "rahil")**
 ```bash
-hashcat -m 0 -a 3 hash.txt P@ss?d?d?d?d
+hashcat -m 0 -a 3 hash.txt rahil?d?d?d
 ```
 
 
